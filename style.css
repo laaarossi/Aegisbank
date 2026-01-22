@@ -329,3 +329,79 @@ a{
   }
 }
 
+/* =========================================================
+   MOBILE OPTIMISATION (iPhone / small screens)
+========================================================= */
+
+@media (max-width: 480px){
+
+  /* NAVBAR MOBILE */
+  .header__nav{
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .header__logo{
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .header__burger{
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .header__auth{
+    gap: 6px;
+  }
+
+  .button{
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .button--primary{
+    padding: 10px 14px;
+  }
+
+  /* HERO MOBILE */
+  .hero{
+    padding: 40px 0 30px;
+  }
+
+  .hero__title{
+    font-size: 34px;
+  }
+
+  .hero__subtitle{
+    font-size: 14px;
+  }
+
+  .hero__cta{
+    margin-top: 10px;
+  }
+
+  .hero__brand{
+    font-size: 160px;
+    bottom: -20px;
+  }
+
+  /* FOOTER MOBILE */
+  .footer{
+    padding: 20px 0 24px;
+    gap: 14px;
+  }
+
+  .footer__social-list,
+  .footer__legal-list{
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer__copyright{
+    font-size: 11px;
+  }
+}
+
+
