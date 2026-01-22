@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- =========================================
+       META / SEO
+  ========================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aegis Bank — Néobanque éthique</title>
+
+  <!-- =========================================
+       CSS (connectivité)
+  ========================================== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+
+  <!-- =========================================
+       HEADER + NAV (sémantique)
+  ========================================== -->
+  <header class="header">
+    <nav class="header__nav" aria-label="Navigation principale">
+
+      <!-- Bloc gauche : burger + logo -->
+      <div class="header__left">
+        <!-- Burger visible (utile pour mobile) -->
+        <button class="header__burger" type="button" aria-label="Ouvrir le menu">
+          ☰
+        </button>
+
+        <!-- Logo -->
+        <a class="header__logo" href="index.html">AEGIS BANK</a>
+      </div>
+
+      <!-- Liens Desktop : 5 liens -->
+      <ul class="header__links" role="list">
+        <li class="header__item"><a class="header__link" href="#">Solutions Streamers</a></li>
+        <li class="header__item"><a class="header__link" href="#">Financement Créatifs</a></li>
+        <li class="header__item"><a class="header__link" href="#">Écosystème Pro</a></li>
+        <li class="header__item"><a class="header__link" href="#">Tarifs</a></li>
+        <li class="header__item"><a class="header__link" href="#">À propos</a></li>
+      </ul>
+
+      <!-- Auth : visibles sur tous devices -->
+      <div class="header__auth" role="group" aria-label="Authentification">
+        <button class="button button--secondary" type="button">Se connecter</button>
+        <button class="button button--primary" type="button">S'inscrire</button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =========================================
+       MAIN
+  ========================================== -->
+  <main class="main">
+
+    <!-- HERO : section principale de conversion -->
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title">La banque éthique et transparente</h1>
+
+        <!-- Sous-titre accrocheur (<= 140 caractères environ) -->
+        <p class="hero__subtitle">
+          Gérez vos revenus de créateur en toute transparence, sans exploitation de vos données ni frais cachés.
+        </p>
+
+        <!-- CTA principal -->
+        <div class="hero__cta">
+          <button class="button button--primary button--lg" type="button">
+            Télécharger l'app
+          </button>
+        </div>
+
+        <!-- Actions secondaires (facultatif mais utile) -->
+        <div class="hero__actions" role="group" aria-label="Actions secondaires">
+          <button class="button button--secondary" type="button">Se connecter</button>
+          <button class="button button--secondary" type="button">S'inscrire</button>
+        </div>
+      </div>
+
+      <!-- Typo décorative en bas (pure déco, pas lue par lecteurs d’écran) -->
+      <span class="hero__brand" aria-hidden="true">AEGIS BANK</span>
+
+    </section>
+  </main>
+
+  <!-- =========================================
+       FOOTER : Social + Légal
+  ========================================== -->
+  <footer class="footer">
+
+    <!-- Social links (Telegram, Mastodon, BlueSky) -->
+    <section class="footer__social" aria-label="Réseaux sociaux">
+      <h2 class="footer__title">Social</h2>
+
+      <ul class="footer__social-list" role="list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#" aria-label="Telegram">Telegram</a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#" aria-label="Mastodon">Mastodon</a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#" aria-label="BlueSky">BlueSky</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Liens légaux obligatoires -->
+    <section class="footer__legal" aria-label="Informations légales">
+      <h2 class="footer__title">Légal</h2>
+
+      <ul class="footer__legal-list" role="list">
+        <li class="footer__legal-item"><a class="footer__legal-link" href="#">Mentions légales</a></li>
+        <li class="footer__legal-item"><a class="footer__legal-link" href="#">Politique de confidentialité</a></li>
+        <li class="footer__legal-item"><a class="footer__legal-link" href="#">CGU</a></li>
+      </ul>
+    </section>
+
+    <p class="footer__copyright">
+      © <span>2026</span> Aegis Bank — Concept de landing page.
+    </p>
+  </footer>
+
+</body>
+</html>
