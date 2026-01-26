@@ -1,130 +1,246 @@
-/* =========================
-no scrooooooooooool    ========================= */
+/* style.css (NO SCROLL / MOBILE FIRST) */
 
-/* le fond noir iOS autour */
+/* ===== RESET ===== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+:root{
+  /* ✅ Garde ta DA : change juste ces variables */
+  --ink: #111111;
+  --muted: rgba(17,17,17,.68);
+
+  --accent: #7867FF;         /* violet bouton */
+  --accent-2: #F1ECFF;       /* lavande footer */
+  --blue: #2F6BFF;           /* bleu icônes */
+
+  --border: rgba(17,17,17,.10);
+  --shadow: 0 18px 50px rgba(0,0,0,.14);
+
+  --r-phone: 34px;
+  --r-card: 16px;
+  --r-btn: 999px;
+}
+
+html, body{
+  height: 100%;
+  overflow: hidden; /* ✅ no scroll global */
+}
+
 body{
-  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: #1c1c1c; /* fond noir autour */
+}
+
+/* ===== STAGE (centre le phone) ===== */
+.stage{
+  height: 100vh;
   display: grid;
   place-items: center;
+  padding: 18px;
 }
 
-/* phone frame plus iOS */
+/* ===== PHONE ===== */
 .phone{
-  width: min(420px, 92vw);
-  height: min(860px, 92vh);
-  border-radius: 34px;
+  width: min(430px, 92vw);
+  height: min(880px, 92vh);
   background: #fff;
+  border-radius: var(--r-phone);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* topbar: plus d’air */
+/* ===== TOPBAR ===== */
 .topbar{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 22px 22px 10px;
 }
 
-/* brand un peu plus visible */
-.brand{
-  font-size: 13px;
-  opacity: .8;
+.topbar-left,
+.topbar-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* bouton menu carré arrondi + lignes bleues */
+.brand{
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .78;
+}
+
+/* bouton menu carré arrondi */
 .icon-btn{
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 14px;
-  border: 1px solid rgba(21,21,21,.10);
+  border: 1px solid var(--border);
   background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
 }
 
 .icon-btn--menu .icon--menu{
-  color: #2F6BFF; /* bleu comme sur ta capture */
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
   opacity: 1;
 }
 
-/* avatar + login */
 .avatar{
-  width: 24px;
-  height: 24px;
-  background: rgba(124,92,255,.35);
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(120,103,255,.35);
 }
 
 .login{
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
   opacity: .75;
+  text-decoration: none;
 }
 
-/* main spacing: c’est ça qui fait “pro” */
+/* ===== MAIN (one screen) ===== */
 .screen{
-  padding: 8px 22px 14px;
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 6px 22px 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* titre plus impactant */
+/* HERO spacing proche capture */
+.hero{
+  padding-top: 8px;
+}
+
+/* Titre très proche (gros, bold) */
 h1{
-  font-size: clamp(36px, 8vw, 44px);
-  line-height: 1.02;
   margin: 10px 0 14px;
+  font-size: clamp(38px, 8.6vw, 48px);
+  line-height: 1.02;
   letter-spacing: -0.03em;
   font-weight: 800;
 }
 
-/* texte lead un peu plus grand et respirant */
+/* Texte */
 .lead{
-  font-size: 15px;
-  line-height: 1.55;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.58;
+  color: var(--muted);
 }
 
-/* CTA: pills plus gros, plus smooth */
+/* CTA */
 .cta{
-  gap: 10px;
-  margin: 6px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 6px 0 14px;
+}
+
+.btn{
+  width: 100%;
+  border-radius: var(--r-btn);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .btn-primary{
+  display: block;
   padding: 16px 18px;
-  font-size: 15px;
-  border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(124,92,255,.22);
+  font-size: 16px;
+  color: #fff;
+  background: var(--accent);
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(120,103,255,.22);
 }
 
-.pill{
+.btn-outline{
   padding: 14px 16px;
-  font-size: 14px;
-  border-radius: 999px;
-  border: 2px solid rgba(124,92,255,.25);
+  font-size: 15px;
+  background: #fff;
+  color: rgba(120,103,255,.95);
+  border: 2px solid rgba(120,103,255,.25);
 }
 
-/* socials : icônes dans des carrés */
+/* Socials (carrés + bleu) */
 .social{
+  display: flex;
+  justify-content: center;
   gap: 14px;
-  padding: 6px 0 0;
+  padding-top: 6px;
 }
 
 .social-btn{
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  border: 1px solid rgba(21,21,21,.10);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-card);
+  border: 1px solid var(--border);
   background: #fff;
   display: grid;
   place-items: center;
+  text-decoration: none;
 }
 
 .social-btn svg{
-  width: 22px;
-  height: 22px;
-  color: #2F6BFF; /* bleu comme ta capture */
-  opacity: 1;
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
 }
 
-/* footer plus discret */
-footer{
+/* Legacy masqué pour no scroll */
+.legacy{ display: none; }
+
+/* Footer discret */
+.footer{
+  flex: 0 0 auto;
+  background: var(--accent-2);
   padding: 12px 14px;
+  text-align: center;
 }
 
-/* no-scroll: on verrouille */
-html, body{
-  overflow: hidden;
+.footer a{
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(17,17,17,.62);
+  text-decoration: none;
+}
+
+.sep{
+  margin: 0 6px;
+  opacity: .35;
+}
+
+/* Micro polish */
+.btn-primary:active,
+.social-btn:active,
+.icon-btn:active{
+  transform: translateY(1px);
+}
+
+/* Petits écrans : on compacte un peu */
+@media (max-height: 760px){
+  h1{ font-size: clamp(34px, 7.8vw, 42px); }
+  .lead{ font-size: 15px; margin-bottom: 14px; }
+  .btn-primary{ padding: 14px 16px; font-size: 15px; }
+  .btn-outline{ padding: 12px 14px; font-size: 14px; }
+  .social-btn{ width: 52px; height: 52px; }
 }
 
 
