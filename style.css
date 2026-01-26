@@ -289,6 +289,86 @@ footer a{
   main{ padding: 22px 22px 0; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
 }
+/* ======================
+   NO SCROLL VERSION
+   ====================== */
+
+/* Empêche le scroll */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Le téléphone prend toute la hauteur */
+.phone {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header fixe en haut */
+.topbar {
+  flex-shrink: 0;
+}
+
+/* Main prend tout l’espace restant */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 18px;
+  overflow: hidden;
+}
+
+/* Hero compact */
+.hero h1 {
+  font-size: clamp(26px, 5vw, 32px);
+  margin-bottom: 8px;
+}
+
+.lead {
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+/* CTA compact */
+.cta {
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  padding: 12px 14px;
+  font-size: 13px;
+}
+
+.pill {
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+/* Social compact */
+.social {
+  padding: 6px 0 10px;
+}
+
+.social a {
+  width: 32px;
+  height: 32px;
+}
+
+/* Ancienne structure compressée */
+.legacy {
+  display: none; /* 👈 on cache les sections longues */
+}
+
+/* Footer fixe en bas */
+footer {
+  flex-shrink: 0;
+  padding: 10px 12px;
+  font-size: 11px;
+}
 
 
 
