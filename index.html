@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- index.html (NO SCROLL) -->
 <!doctype html>
 <html lang="fr">
 <head>
@@ -6,25 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mid fi</title>
 
-  <!-- Police -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- ✅ lien vers ton CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="phone">
 
-    <!-- HEADER (nouvelle structure) -->
+    <!-- HEADER -->
     <header class="topbar">
       <div class="topbar-left">
         <div class="brand">Mid fi</div>
 
         <button class="icon-btn" aria-label="Ouvrir le menu">
-          <!-- Burger ( menu ) -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                stroke-width="2" stroke-linecap="round">
             <path d="M4 7h16M4 12h16M4 17h16"></path>
@@ -38,10 +35,8 @@
       </div>
     </header>
 
-    <!-- MAIN -->
-    <main>
-
-      <!-- HERO (une nouvelle structure mais contenu modifiable) -->
+    <!-- MAIN (ONE SCREEN) -->
+    <main class="screen">
       <section class="hero">
         <h1>La néobanque éthique<br />& transparente</h1>
 
@@ -76,86 +71,9 @@
         </div>
       </section>
 
-      <!-- ✅ ICI = mon ancienne structure (fusion) -->
-      <section class="legacy">
-
-        <!-- SECTION 1 (remplace par mon ancien contenu) -->
-        <section class="block">
-          <h2 class="block-title">Pourquoi nous ?</h2>
-
-          <div class="grid">
-            <article class="card">
-              <h3 class="card-title">Transparence</h3>
-              <p class="card-text">Tu sais où va ton argent, sans frais cachés.</p>
-            </article>
-
-            <article class="card">
-              <h3 class="card-title">Éthique</h3>
-              <p class="card-text">On finance des projets alignés à tes valeurs.</p>
-            </article>
-
-            <article class="card">
-              <h3 class="card-title">Simple</h3>
-              <p class="card-text">Une app claire, un budget maîtrisé.</p>
-            </article>
-          </div>
-        </section>
-
-        <!-- SECTION 2 -->
-        <section class="block">
-          <h2 class="block-title">Avantages</h2>
-
-          <div class="stack">
-            <div class="row">
-              <span class="dot"></span>
-              <p class="row-text">Notifications de dépenses en temps réel</p>
-            </div>
-
-            <div class="row">
-              <span class="dot"></span>
-              <p class="row-text">Sous-budgets pour mieux gérer</p>
-            </div>
-
-            <div class="row">
-              <span class="dot"></span>
-              <p class="row-text">Support humain & rapide</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 3 -->
-        <section class="block">
-          <h2 class="block-title">Témoignages</h2>
-
-          <div class="grid">
-            <article class="card">
-              <p class="card-text">“Je contrôle enfin mon budget sans stress.”</p>
-              <p class="card-meta">— Sarah</p>
-            </article>
-            <article class="card">
-              <p class="card-text">“L’app est super claire, j’adore.”</p>
-              <p class="card-meta">— Lina</p>
-            </article>
-          </div>
-        </section>
-
-        <!-- SECTION 4 -->
-        <section class="block">
-          <h2 class="block-title">FAQ</h2>
-
-          <div class="faq">
-            <details class="faq-item">
-              <summary>Est-ce gratuit ?</summary>
-              <p>Oui, tu peux commencer gratuitement.</p>
-            </details>
-
-            <details class="faq-item">
-              <summary>Je peux résilier quand je veux ?</summary>
-              <p>Oui, tu restes libre.</p>
-            </details>
-          </div>
-        </section>
-
+      <!-- Ancienne structure masquée en no-scroll -->
+      <section class="legacy" aria-hidden="true">
+        <!-- Tu peux garder ton contenu ici, mais il ne s'affiche pas en no-scroll -->
       </section>
     </main>
 
@@ -170,4 +88,3 @@
   </div>
 </body>
 </html>
-
