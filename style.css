@@ -1,206 +1,132 @@
-/* style.css (NO SCROLL) */
+/* =========================
+no scrooooooooooool    ========================= */
 
-/* ========= RESET ========= */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-:root{
-  /* 🔁 Remplace par TA DA */
-  --ink: #151515;
-  --muted: rgba(21,21,21,.70);
-
-  --accent: #7C5CFF;
-  --accent-2: #EFE9FF;
-
-  --border: rgba(21,21,21,.10);
-  --radius-xl: 28px;
-  --radius-lg: 18px;
-
-  --shadow: 0 14px 40px rgba(0,0,0,.10);
-}
-
-html, body{
-  height: 100%;
-  overflow: hidden; /* ✅ no scroll */
-}
-
+/* le fond noir iOS autour */
 body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background: #1c1c1c;
-}
-
-/* ========= PHONE (ONE SCREEN) ========= */
-.phone{
-  width: min(390px, 92vw);
-  height: 100vh;                /* ✅ one screen */
-  margin: 0 auto;
-  background: #fff;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* ========= HEADER ========= */
-.topbar{
-  flex-shrink: 0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 14px 16px;
-}
-
-.topbar-left,
-.topbar-right{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-}
-
-.brand{
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .02em;
-  opacity: .7;
-}
-
-.icon-btn{
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fff;
-  display:grid;
-  place-items:center;
   padding: 0;
-  cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
-.icon-btn svg{ width: 20px; height: 20px; opacity: .85; }
+/* phone frame plus iOS */
+.phone{
+  width: min(420px, 92vw);
+  height: min(860px, 92vh);
+  border-radius: 34px;
+  background: #fff;
+}
 
+/* topbar: plus d’air */
+.topbar{
+  padding: 22px 22px 10px;
+}
+
+/* brand un peu plus visible */
+.brand{
+  font-size: 13px;
+  opacity: .8;
+}
+
+/* bouton menu carré arrondi + lignes bleues */
+.icon-btn{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(21,21,21,.10);
+  background: #fff;
+}
+
+.icon-btn--menu .icon--menu{
+  color: #2F6BFF; /* bleu comme sur ta capture */
+  opacity: 1;
+}
+
+/* avatar + login */
 .avatar{
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
+  width: 24px;
+  height: 24px;
   background: rgba(124,92,255,.35);
-  display:inline-block;
 }
 
 .login{
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink);
-  opacity: .7;
-  text-decoration: none;
-}
-
-/* ========= MAIN ========= */
-.screen{
-  flex: 1;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between; /* ✅ répartit hero et footer proprement */
-  padding: 16px 18px 10px;
-  overflow: hidden;
-}
-
-.hero{
-  padding-top: 6px;
-}
-
-h1{
-  margin: 6px 0 10px;
-  font-size: clamp(26px, 5.8vw, 34px); /* ✅ compact */
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-.lead{
-  margin: 0 0 14px;
-  color: var(--muted);
   font-size: 13px;
-  line-height: 1.45;
+  opacity: .75;
 }
 
-/* CTA */
+/* main spacing: c’est ça qui fait “pro” */
+.screen{
+  padding: 8px 22px 14px;
+}
+
+/* titre plus impactant */
+h1{
+  font-size: clamp(36px, 8vw, 44px);
+  line-height: 1.02;
+  margin: 10px 0 14px;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+/* texte lead un peu plus grand et respirant */
+.lead{
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+/* CTA: pills plus gros, plus smooth */
 .cta{
-  display:flex;
-  flex-direction:column;
-  gap: 8px;
-  margin: 4px 0 10px;
+  gap: 10px;
+  margin: 6px 0 16px;
 }
 
 .btn-primary{
-  display:block;
-  width: 100%;
-  text-align:center;
-  text-decoration:none;
+  padding: 16px 18px;
+  font-size: 15px;
   border-radius: 999px;
-  padding: 12px 14px;
-  font-weight: 700;
-  font-size: 13px;
-  color:#fff;
-  background: var(--accent);
-  box-shadow: 0 10px 26px rgba(124,92,255,.22);
+  box-shadow: 0 12px 30px rgba(124,92,255,.22);
 }
 
 .pill{
-  width:100%;
-  background:#fff;
-  border: 1px solid rgba(124,92,255,.25);
-  color: rgba(124,92,255,.90);
+  padding: 14px 16px;
+  font-size: 14px;
   border-radius: 999px;
-  padding: 10px 12px;
-  font-weight: 700;
-  font-size: 12px;
-  text-align:center;
+  border: 2px solid rgba(124,92,255,.25);
 }
 
-/* Social */
+/* socials : icônes dans des carrés */
 .social{
-  display:flex;
-  justify-content:center;
-  gap: 16px;
+  gap: 14px;
   padding: 6px 0 0;
 }
 
-.social a{
-  width: 32px;
-  height: 32px;
-  border-radius: 12px;
-  display:grid;
-  place-items:center;
-  border: 1px solid var(--border);
-  background:#fff;
-  text-decoration:none;
+.social-btn{
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(21,21,21,.10);
+  background: #fff;
+  display: grid;
+  place-items: center;
 }
 
-.social svg{ width: 16px; height: 16px; opacity: .9; }
+.social-btn svg{
+  width: 22px;
+  height: 22px;
+  color: #2F6BFF; /* bleu comme ta capture */
+  opacity: 1;
+}
 
-/* Cache l'ancienne structure en no-scroll */
-.legacy{ display: none; }
-
-/* ========= FOOTER ========= */
+/* footer plus discret */
 footer{
-  flex-shrink: 0;
-  background: var(--accent-2);
-  padding: 10px 12px;
-  text-align:center;
+  padding: 12px 14px;
 }
 
-footer a{
-  font-size: 11px;
-  color: rgba(21,21,21,.65);
-  text-decoration:none;
-  font-weight: 600;
+/* no-scroll: on verrouille */
+html, body{
+  overflow: hidden;
 }
 
-.sep{ margin: 0 6px; opacity: .35; }
 
 
 
