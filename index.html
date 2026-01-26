@@ -1,130 +1,173 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="fr">
 <head>
-  <!-- =========================================
-       META / SEO
-  ========================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aegis Bank — Néobanque éthique</title>
+  <title>Mid fi</title>
 
-  <!-- =========================================
-       CSS (connectivité)
-  ========================================== -->
+  <!-- Police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ lien vers ton CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="page">
+<body>
+  <div class="phone">
 
-  <!-- =========================================
-       HEADER + NAV (sémantique)
-  ========================================== -->
-  <header class="header">
-    <nav class="header__nav" aria-label="Navigation principale">
+    <!-- HEADER (nouvelle structure) -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="brand">Mid fi</div>
 
-      <!-- Bloc gauche : burger + logo -->
-      <div class="header__left">
-        <!-- Burger visible (utile pour mobile) -->
-        <button class="header__burger" type="button" aria-label="Ouvrir le menu">
-          ☰
+        <button class="icon-btn" aria-label="Ouvrir le menu">
+          <!-- Burger ( menu ) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
         </button>
-
-        <!-- Logo -->
-        <a class="header__logo" href="index.html">AEGIS BANK</a>
       </div>
 
-      <!-- Liens Desktop : 5 liens -->
-      <ul class="header__links" role="list">
-        <li class="header__item"><a class="header__link" href="#">Solutions Streamers</a></li>
-        <li class="header__item"><a class="header__link" href="#">Financement Créatifs</a></li>
-        <li class="header__item"><a class="header__link" href="#">Écosystème Pro</a></li>
-        <li class="header__item"><a class="header__link" href="#">Tarifs</a></li>
-        <li class="header__item"><a class="header__link" href="#">À propos</a></li>
-      </ul>
-
-      <!-- Auth : visibles sur tous devices -->
-      <div class="header__auth" role="group" aria-label="Authentification">
-        <button class="button button--secondary" type="button">Se connecter</button>
-        <button class="button button--primary" type="button">S'inscrire</button>
+      <div class="topbar-right">
+        <span class="avatar" aria-hidden="true"></span>
+        <a class="login" href="#">S’inscrire / Se connecter</a>
       </div>
+    </header>
 
-    </nav>
-  </header>
+    <!-- MAIN -->
+    <main>
 
-  <!-- =========================================
-       MAIN
-  ========================================== -->
-  <main class="main">
+      <!-- HERO (une nouvelle structure mais contenu modifiable) -->
+      <section class="hero">
+        <h1>La néobanque éthique<br />& transparente</h1>
 
-    <!-- HERO : section principale de conversion -->
-    <section class="hero" aria-labelledby="hero-title">
-
-      <div class="hero__content">
-        <h1 class="hero__title" id="hero-title">La banque éthique et transparente</h1>
-
-        <!-- Sous-titre accrocheur (<= 140 caractères environ) -->
-        <p class="hero__subtitle">
-          Gérez vos revenus de créateur en toute transparence, sans exploitation de vos données ni frais cachés.
+        <p class="lead">
+          Finance ton avenir avec une banque qui te ressemble.<br />
+          Honnête, engagée et sans prise de tête
         </p>
 
-        <!-- CTA principal -->
-        <div class="hero__cta">
-          <button class="button button--primary button--lg" type="button">
-            Télécharger l'app
-          </button>
+        <div class="cta">
+          <a class="btn-primary" href="#">Téléchargez l’app</a>
+          <div class="pill">20€ offerts - Mars 2026</div>
         </div>
 
-        <!-- Actions secondaires (facultatif mais utile) -->
-        <div class="hero__actions" role="group" aria-label="Actions secondaires">
-          <button class="button button--secondary" type="button">Se connecter</button>
-          <button class="button button--secondary" type="button">S'inscrire</button>
+        <div class="social" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Réseau 1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 12c-3-6-8-7-10-4 1 4 5 6 10 4Z"/>
+              <path d="M12 12c3-6 8-7 10-4-1 4-5 6-10 4Z"/>
+              <path d="M12 12v8"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Réseau 2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 3 3 11l7 2 2 7 3-4 4 3 2-16Z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Réseau 3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19V5l8 9 8-9v14"/>
+            </svg>
+          </a>
         </div>
-      </div>
+      </section>
 
-      <!-- Typo décorative en bas (pure déco, pas lue par lecteurs d’écran) -->
-      <span class="hero__brand" aria-hidden="true">AEGIS BANK</span>
+      <!-- ✅ ICI = mon ancienne structure (fusion) -->
+      <section class="legacy">
 
-    </section>
-  </main>
+        <!-- SECTION 1 (remplace par mon ancien contenu) -->
+        <section class="block">
+          <h2 class="block-title">Pourquoi nous ?</h2>
 
-  <!-- =========================================
-       FOOTER : Social + Légal
-  ========================================== -->
-  <footer class="footer">
+          <div class="grid">
+            <article class="card">
+              <h3 class="card-title">Transparence</h3>
+              <p class="card-text">Tu sais où va ton argent, sans frais cachés.</p>
+            </article>
 
-    <!-- Social links (Telegram, Mastodon, BlueSky) -->
-    <section class="footer__social" aria-label="Réseaux sociaux">
-      <h2 class="footer__title">Social</h2>
+            <article class="card">
+              <h3 class="card-title">Éthique</h3>
+              <p class="card-text">On finance des projets alignés à tes valeurs.</p>
+            </article>
 
-      <ul class="footer__social-list" role="list">
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="#" aria-label="Telegram">Telegram</a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="#" aria-label="Mastodon">Mastodon</a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="#" aria-label="BlueSky">BlueSky</a>
-        </li>
-      </ul>
-    </section>
+            <article class="card">
+              <h3 class="card-title">Simple</h3>
+              <p class="card-text">Une app claire, un budget maîtrisé.</p>
+            </article>
+          </div>
+        </section>
 
-    <!-- Liens légaux obligatoires -->
-    <section class="footer__legal" aria-label="Informations légales">
-      <h2 class="footer__title">Légal</h2>
+        <!-- SECTION 2 -->
+        <section class="block">
+          <h2 class="block-title">Avantages</h2>
 
-      <ul class="footer__legal-list" role="list">
-        <li class="footer__legal-item"><a class="footer__legal-link" href="#">Mentions légales</a></li>
-        <li class="footer__legal-item"><a class="footer__legal-link" href="#">Politique de confidentialité</a></li>
-        <li class="footer__legal-item"><a class="footer__legal-link" href="#">CGU</a></li>
-      </ul>
-    </section>
+          <div class="stack">
+            <div class="row">
+              <span class="dot"></span>
+              <p class="row-text">Notifications de dépenses en temps réel</p>
+            </div>
 
-    <p class="footer__copyright">
-      © <span>2026</span> Aegis Bank — Concept de landing page.
-    </p>
-  </footer>
+            <div class="row">
+              <span class="dot"></span>
+              <p class="row-text">Sous-budgets pour mieux gérer</p>
+            </div>
 
+            <div class="row">
+              <span class="dot"></span>
+              <p class="row-text">Support humain & rapide</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="block">
+          <h2 class="block-title">Témoignages</h2>
+
+          <div class="grid">
+            <article class="card">
+              <p class="card-text">“Je contrôle enfin mon budget sans stress.”</p>
+              <p class="card-meta">— Sarah</p>
+            </article>
+            <article class="card">
+              <p class="card-text">“L’app est super claire, j’adore.”</p>
+              <p class="card-meta">— Lina</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section class="block">
+          <h2 class="block-title">FAQ</h2>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>Est-ce gratuit ?</summary>
+              <p>Oui, tu peux commencer gratuitement.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Je peux résilier quand je veux ?</summary>
+              <p>Oui, tu restes libre.</p>
+            </details>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="#">Mentions légales</a><span class="sep">|</span>
+      <a href="#">Confidentialité</a><span class="sep">|</span>
+      <a href="#">CGU</a><span class="sep">|</span>
+      <a href="#">Contact</a>
+    </footer>
+
+  </div>
 </body>
 </html>
 
