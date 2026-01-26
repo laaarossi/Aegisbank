@@ -1,4 +1,4 @@
-<!-- index.html (NO SCROLL) -->
+<!-- index.html (NO SCROLL / MOBILE FIRST) -->
 <!doctype html>
 <html lang="fr">
 <head>
@@ -8,83 +8,87 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="phone">
+  <div class="stage">
+    <div class="phone" role="application" aria-label="Mid fi landing">
 
-    <!-- HEADER -->
-    <header class="topbar">
-      <div class="topbar-left">
-        <div class="brand">Mid fi</div>
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="brand">Mid fi</div>
 
-        <button class="icon-btn" aria-label="Ouvrir le menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <div class="topbar-right">
-        <span class="avatar" aria-hidden="true"></span>
-        <a class="login" href="#">S’inscrire / Se connecter</a>
-      </div>
-    </header>
-
-    <!-- MAIN (ONE SCREEN) -->
-    <main class="screen">
-      <section class="hero">
-        <h1>La néobanque éthique<br />& transparente</h1>
-
-        <p class="lead">
-          Finance ton avenir avec une banque qui te ressemble.<br />
-          Honnête, engagée et sans prise de tête
-        </p>
-
-        <div class="cta">
-          <a class="btn-primary" href="#">Téléchargez l’app</a>
-          <div class="pill">20€ offerts - Mars 2026</div>
+          <button class="icon-btn icon-btn--menu" type="button" aria-label="Ouvrir le menu">
+            <svg class="icon icon--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+              <path d="M6 8h12M6 12h12M6 16h12"></path>
+            </svg>
+          </button>
         </div>
 
-        <div class="social" aria-label="Réseaux sociaux">
-          <a href="#" aria-label="Réseau 1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 12c-3-6-8-7-10-4 1 4 5 6 10 4Z"/>
-              <path d="M12 12c3-6 8-7 10-4-1 4-5 6-10 4Z"/>
-              <path d="M12 12v8"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Réseau 2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 3 3 11l7 2 2 7 3-4 4 3 2-16Z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Réseau 3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19V5l8 9 8-9v14"/>
-            </svg>
-          </a>
+        <div class="topbar-right">
+          <span class="avatar" aria-hidden="true"></span>
+          <a class="login" href="#">S’inscrire / Se connecter</a>
         </div>
-      </section>
+      </header>
 
-      <!-- Ancienne structure masquée en no-scroll -->
-      <section class="legacy" aria-hidden="true">
-        <!-- Tu peux garder ton contenu ici, mais il ne s'affiche pas en no-scroll -->
-      </section>
-    </main>
+      <!-- MAIN (ONE SCREEN) -->
+      <main class="screen">
+        <section class="hero" aria-label="Hero">
+          <h1>La néobanque éthique<br />& transparente</h1>
 
-    <!-- FOOTER -->
-    <footer>
-      <a href="#">Mentions légales</a><span class="sep">|</span>
-      <a href="#">Confidentialité</a><span class="sep">|</span>
-      <a href="#">CGU</a><span class="sep">|</span>
-      <a href="#">Contact</a>
-    </footer>
+          <p class="lead">
+            Finance ton avenir avec une banque qui te ressemble.<br />
+            Honnête, engagée et sans prise de tête
+          </p>
 
+          <div class="cta" aria-label="Call to action">
+            <a class="btn btn-primary" href="#">Téléchargez l’app</a>
+            <div class="btn btn-outline" role="note">20€ offerts - Mars 2026</div>
+          </div>
+
+          <div class="social" aria-label="Réseaux sociaux">
+            <a class="social-btn" href="#" aria-label="Réseau 1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c-3-6-8-7-10-4 1 4 5 6 10 4Z"/>
+                <path d="M12 12c3-6 8-7 10-4-1 4-5 6-10 4Z"/>
+                <path d="M12 12v8"/>
+              </svg>
+            </a>
+
+            <a class="social-btn" href="#" aria-label="Réseau 2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 3 3 11l7 2 2 7 3-4 4 3 2-16Z"/>
+              </svg>
+            </a>
+
+            <a class="social-btn" href="#" aria-label="Réseau 3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V5l8 9 8-9v14"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Anciennes sections : gardées mais masquées (no scroll) -->
+        <section class="legacy" aria-hidden="true">
+          <!-- Colle ici tes anciennes sections si tu veux les réactiver plus tard -->
+        </section>
+      </main>
+
+      <!-- FOOTER (optionnel : si tu veux 100% comme la capture, laisse vide ou garde discret) -->
+      <footer class="footer">
+        <a href="#">Mentions légales</a><span class="sep">|</span>
+        <a href="#">Confidentialité</a><span class="sep">|</span>
+        <a href="#">CGU</a><span class="sep">|</span>
+        <a href="#">Contact</a>
+      </footer>
+
+    </div>
   </div>
 </body>
 </html>
+
