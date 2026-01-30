@@ -60,14 +60,14 @@ Ce projet a été réalisé dans un but :
 🚀 Aperçu du projet
 
 👉 Lien du site :  
-https://willowy-boba-a263f7.netlify.app
+[https://willowy-boba-a263f7.netlify.app](https://aegisbank.vercel.app/)
 
 Exemple :  
 
 ---
  🖤 Auteurs
 
-Projet réalisé par Sarah,Shanya,Marielle,Yassir et mon future époux chat GPT <3 
+sarah et mon chat 
 
 
 
