@@ -338,6 +338,17 @@ a{ color: inherit; text-decoration: none; }
     flex: 1;
   }
 
+  @media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .hero {
+    height: calc(100vh - var(--header-height));
+  }
+}
+
+
 /* Alignement à droite de la section légal (mobile + desktop) */
 .footer__legal{
   display: flex;
