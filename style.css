@@ -1,4 +1,242 @@
-//* =========================================================
+/* =========================================================
+   1) DESIGN SYSTEM (Variables)
+========================================================= */
+:root{
+  --color-bg: #0b0b10;
+  --color-bg-2: #0f0f18;
+  --color-text: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.72);
+  --color-border: rgba(255, 255, 255, 0.10);
+
+  --color-purple: #a855f7;
+  --color-purple-2: #7c3aed;
+  --color-glow: rgba(168, 85, 247, 0.38);
+
+  --container: 1200px;
+  --header-height: 72px;
+
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  --font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* =========================================================
+   2) RESET / BASE (mobile-first)
+========================================================= */
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+.page{
+  font-family: var(--font-family);
+  color: var(--color-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(900px 500px at 25% -10%, rgba(168, 85, 247, 0.40), transparent 60%),
+    radial-gradient(700px 450px at 90% 20%, rgba(124, 58, 237, 0.25), transparent 55%),
+    linear-gradient(180deg, var(--color-bg), var(--color-bg-2));
+}
+
+a{ color: inherit; text-decoration: none; }
+
+/* =========================================================
+   3) HEADER (mobile-first)
+========================================================= */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+
+  background: rgba(11, 11, 16, 0.70);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__nav{
+  width: 92%;
+  margin: 0 auto;
+  height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header__left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__burger{
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.header__logo{
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.header__links{
+  /* MOBILE-FIRST : caché sur mobile */
+  display: none;
+  list-style: none;
+}
+
+.header__auth{
+  display: flex;
+  gap: 8px;
+}
+
+/* =========================================================
+   4) BUTTONS (mobile-first)
+========================================================= */
+.button{
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+
+  padding: 9px 12px;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.button--primary{
+  border: none;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-purple-2));
+  box-shadow: 0 14px 40px var(--color-glow);
+  font-weight: 700;
+  padding: 10px 14px;
+}
+
+.button--secondary{
+  border-color: var(--color-border);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.90);
+}
+
+.button--lg{
+  padding: 14px 18px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   5) MAIN + HERO (mobile-first)
+========================================================= */
+.main{
+  width: 92%;
+  margin: 0 auto;
+}
+
+.hero{
+  min-height: calc(100vh - var(--header-height));
+  padding: 46px 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.hero__content{
+  width: 100%;
+  max-width: 680px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__title{
+  font-size: 34px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle{
+  max-width: 520px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin-bottom: 20px;
+}
+
+.hero__cta{
+  margin-bottom: 14px;
+}
+
+.hero__actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   6) FOOTER (mobile-first)
+========================================================= */
+.footer{
+  width: 92%;
+  margin: 0 auto;
+  padding: 20px 0 26px;
+  border-top: 1px solid var(--color-border);
+
+  display: grid;
+  grid-template-columns: 1fr; /* mobile = 1 colonne */
+  gap: 14px;
+}
+
+.footer__title{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 8px;
+}
+
+.footer__list{
+  list-style: none;
+  display: flex;
+  flex-direction:column-reverse; /* mobile = vertical */
+  gap: 6px;
+}
+
+.footer__link{
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.footer__link:hover{
+  color: var(--color-text);
+  border-bottom-color: rgba(168,85,247,0.5);
+}
+
+.footer__copyright{
+  margin-top: 6px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* =========================================================
    7) DESKTOP UPGRADE 
    Mobile-first : ou on améliore le layout sur grand écran
 ========================================================= */
