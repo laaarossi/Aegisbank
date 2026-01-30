@@ -188,22 +188,6 @@ a{ color: inherit; text-decoration: none; }
   justify-content: center;
 }
 
-.hero__brand{
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  font-size: 160px;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-  white-space: nowrap;
-
-  color: rgba(255,255,255,0.05);
-  pointer-events: none;
-  user-select: none;
-}
 
 /* =========================================================
    6) FOOTER (mobile-first)
@@ -358,3 +342,4 @@ a{ color: inherit; text-decoration: none; }
     font-size: 12px;
   }
 }
+
